@@ -16,14 +16,19 @@ app.use(cors());
 const bodyParser = require("body-parser");
 app.use(bodyParser.json());
 
+const morgan = require("morgan");
+app.use(
+  morgan(":method :url :status :res[content-length] - :response-time ms")
+);
+
 // Mount your existing apiRouter below at the '/api' path.
 const apiRouter = require("./server/api");
 app.use("/api", apiRouter);
 
 // This conditional is here for testing purposes:
 if (!module.parent) {
-    // Add your code to start the server listening at PORT below:
-    app.listen(PORT, () => {
-        console.log("Server is listening on port " + PORT);
-    });
+  // Add your code to start the server listening at PORT below:
+  app.listen(PORT, () => {
+    console.log("Server is listening on port " + PORT);
+  });
 }
