@@ -1,3 +1,8 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
 h1, h2, h3, h4, p, li {
 	font-family: sans-serif;
 	color: #444
@@ -15,10 +20,14 @@ h1 {
 
 h2 {
 	font-size: 40px;
+	margin-bottom: 20px;
+	position: relative;
+	/* background-color: aqua; */
 }
 
 h3 {
 	font-size: 30px;
+	margin-bottom: 30px;
 }
 
 h4 {
@@ -30,6 +39,12 @@ h4 {
 p {
 	font-size: 22px;
 	line-height: 1.5;
+	margin-bottom: 15px;
+}
+
+ol, ul {
+	margin-left: 50px;
+	margin-bottom: 20px;
 }
 
 li {
@@ -66,10 +81,110 @@ article header p {
 
 .main-header {
 	background-color: #f7f7f7;
+	padding: 20px 40px 20px 40px;
+	margin-bottom: 60px;
+	height: 80px;
 }
 
 aside {
 	background-color: #f7f7f7;
 	border-top: 5px solid #1098ad;
 	border-bottom: 5px solid #1098ad;
+	padding: 50px 0px;
+	width: 500px;
+	margin: 0 auto;
+}
+
+li {
+	margin-bottom: 5px;
+}
+
+li:nth-child(odd) {
+	font-weight: bold;
+}
+
+li:last-child {
+	color: red;
+	margin-bottom: 0px;
+}
+
+a:link, a:visited {
+	color: rgb(59, 138, 202);
+	text-decoration: none;
+}
+
+a:hover {
+	color: rgb(62, 53, 78);
+	font-weight: bold;
+	text-decoration: underline dashed rgb(62, 53, 78);
+}
+
+a:active {
+	background-color: blueviolet;
+	font-style: italic;
+}
+
+nav {
+	font-size: 18px;
+	color: rgb(210, 210, 210);
+	text-align: center;
+}
+
+.post-header {
+	margin-bottom: 30px;
+	position: relative;
+}
+
+article {
+	margin-bottom: 60px;
+}
+
+.post-img {
+	width: 100%;
+	height: auto;
+}
+
+.container {
+	width: 900px;
+	margin-left: auto;
+	margin-right: auto;
+
+	position: relative;
+}
+
+button {
+	font-size: 22px;
+	padding: 20px;
+	cursor: pointer;
+
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+}
+
+h1::first-letter {
+	font-style: normal;
+}
+
+h3 + p::first-line {
+	color: blue;
+}
+
+
+h2::after {
+	content: "TOP";
+	background-color: #ffe70e;
+	font-size: 16px;
+	font-weight: bold;
+	display: inline-block; /* to be able to add padding */
+	padding: 5px 10px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	color: #444
+}
+
+nav a:link {
+	display: inline-block;
+	margin: 20px;
 }
